@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ana.master.cs" Inherits="_1912901057_AtakanCetinkaya.Ana" %>
+
+<%@ Register src="UserControl/Menu.ascx" tagname="Menu" tagprefix="uc1" %>
+<%@ Register Src="~/UserControl/UyeGiris.ascx" TagPrefix="uc1" TagName="UyeGiris" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="AnaStil.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="anatablo">
+                <tr>
+                    <td colspan ="2" class="anacerceve">
+                        <img src="Resim/aydin-hakkinda-bilgi-777x400_1024x150.jpg"/>
+                    </td>
+                </tr>
+                 <tr>
+                    <td colspan ="2" class="anacerceve">
+                        <uc1:UyeGiris runat="server" ID="UyeGiris" />
+                    </td>
+                </tr>
+                 <tr>
+                     <td class="anatablomenu anacerceve">
+                         <uc1:Menu ID="Menu1" runat="server" />
+                     </td>
+                     <td class="anatabloicerik anacerceve">
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                         </asp:ContentPlaceHolder>
+                     </td>
+                </tr>
+                 <tr>
+                    <td colspan ="2" class="anacerceve">Dipnot</td>
+                </tr>
+            </table>
+
+           
+        </div>
+    </form>
+</body>
+</html>
